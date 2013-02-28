@@ -6,6 +6,10 @@ if __FILE__ == $0
   puts $0
   
   array = $*
+  if array.empty?
+    abort "El array está vacío"
+  end
+
   asc = ordenar array
   desc = ordenar array, true
   asc.each do |x| print " #{x}" end
